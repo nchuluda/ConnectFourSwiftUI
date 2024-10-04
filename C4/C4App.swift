@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct C4App: App {
+    @StateObject var game = ConnectFourGame()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(game)
         }
     }
 }
